@@ -1788,7 +1788,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 body {
-  background: #edeff0;
+  background: black;
   background-image: url("../img/berlin.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -1803,9 +1803,8 @@ body {
   margin: 0 auto;
 }
 
-.contained {
-  opacity: .9;
-  background: white;
+/*.contained {
+  background-color: rgba(255, 255, 255, .08);
   padding: 30px 15px;
   margin-bottom: 30px;
   position: relative;
@@ -1818,7 +1817,7 @@ body {
   -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
-}
+}*/
 
 .heading {
   margin-bottom: 20px;
@@ -1826,15 +1825,15 @@ body {
 
 h1,
 h2 {
-  font-size: 3em;
+  font-size: 3.5em;
   font-weight: 500;
-  margin-bottom: 8px;
-  color: #384047;
+  margin-bottom: 10px;
+  color: white;
   line-height: 1.2;
 }
 
 h2 {
-  font-size: 1.8em;
+  font-size: 1.5em;
 }
 aside h2 {
   margin-bottom: 15px;
@@ -1987,10 +1986,9 @@ ul.filter-select button:after {
 }
 #photos .image {
   display: block;
-  min-height: 240px;
-  background: #edeff0;
+  background-color: rgba(237, 239, 240, 0.85);
   text-align: center;
-  height: 260px;
+  height: 230px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -2011,12 +2009,13 @@ ul.filter-select button:after {
   vertical-align: middle;
 }
 #photos img {
-  max-width: 80%;
+  border-radius: 5px;
+  max-width: 90%;
   max-height: 200px;
   vertical-align: middle;
   -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
 }
 
 .button {
