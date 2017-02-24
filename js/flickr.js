@@ -2,7 +2,7 @@
 $('button').click(function() {
 	$('button').removeClass("selected");
 	$(this).addClass("selected");
-	var flickrAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+	var flickrAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
 	var tag = $(this).text();
 	tag += ",berlin,black,white";
 	var flickrOptions = {
@@ -30,7 +30,7 @@ $('form').submit(function(evt) {
 
 	$searchField.prop("disabled", true);
 	$submitButton.attr("disabled", true).val("searching...");
-	var flickrAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+	var flickrAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
 	var tag = $searchField.val();
 	tag += ",berlin,black,white";
 	var flickrOptions = {
