@@ -49,6 +49,15 @@ body {
   min-width: 320px;
 }
 
+.center {
+  text-align: center;
+}
+
+.letter-space {
+  letter-spacing: .1rem;
+
+}
+
 @media screen {
   .clear {
     clear: both;
@@ -1780,6 +1789,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 body {
   background: #edeff0;
+  background-image: url("../img/berlin.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+  background-size: cover;
   padding: 50px 0 0;
   font-family: "Varela Round", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 62.5%;
@@ -1811,7 +1825,7 @@ body {
 
 h1,
 h2 {
-  font-size: 2.4em;
+  font-size: 3em;
   font-weight: 500;
   margin-bottom: 8px;
   color: #384047;
@@ -1827,7 +1841,7 @@ aside h2 {
 
 p, label {
   color: #8d9aa5;
-  font-size: 1.4em;
+  font-size: 1.5em;
   margin-bottom: 15px;
   line-height: 1.4;
 }
@@ -2065,3 +2079,5 @@ footer p {
 input[type=search] {
   font-size: 2em;
 }
+
+
