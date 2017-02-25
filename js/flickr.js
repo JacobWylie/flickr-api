@@ -4,7 +4,7 @@ $('button').click(function() {
 	$(this).addClass("selected");
 	var flickrAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
 	var tag = $(this).text();
-	tag += ",berlin,black and white";
+	tag += ",berlin,blackandwhite";
 	var flickrOptions = {
 		tags: tag,
 		format: "json"
