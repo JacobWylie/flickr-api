@@ -12,9 +12,10 @@ $('button').click(function() {
 	function displayPhotos(data) {
 		var photoHTML = '<ul>';
 		$.each( data.items, function(i, photo) {
+			var image = (photo.media.m).replace('_m.jpg', '_b.jpg');
 			photoHTML += '<li class="grid-25 tablet-grid-50">';
-			photoHTML += '<a href="' + photo.link + '" class="image">';
-			photoHTML += '<img src="' + photo.media.m + '"></a></li>';
+			photoHTML += `<a href="${image}" data-lightbox="image" class="image">`;
+			photoHTML += `<img src="${photo.media.m}"></a></li>`;
 		});
 		photoHTML += '</ul>';
 		$('#photos').html(photoHTML);
@@ -40,9 +41,10 @@ $('form').submit(function(evt) {
 	function displayPhotos(data) {
 		var photoHTML = '<ul>';
 		$.each( data.items, function(i, photo) {
+			var image = (photo.media.m).replace('_m.jpg', '_b.jpg');
 			photoHTML += '<li class="grid-25 tablet-grid-50">';
-			photoHTML += '<a href="' + photo.link + '" class="image">';
-			photoHTML += '<img src="' + photo.media.m + '"></a></li>';
+			photoHTML += `<a href="${image}.jpg" data-lightbox="image" class="image">`;
+			photoHTML += `<img src="${photo.media.m}"></a></li>`;
 		});
 		photoHTML += '</ul>';
 		$('#photos').html(photoHTML);
@@ -51,3 +53,35 @@ $('form').submit(function(evt) {
 	}
 	$.getJSON(flickrAPI, flickrOptions, displayPhotos);
 }); // End Form Search Event
+
+// Lightbox
+
+lightbox.option({
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
