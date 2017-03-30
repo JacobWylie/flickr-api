@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>AJAX Flickr Photo Feeder</title>
+  <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+  <link href="js/lightbox/css/lightbox.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+
+  
+</head>
+<body>
+  <div class="grid-container centered">
+    <div class="grid-100">
+      <div class="contained">
+        <div class="grid-100">
+          <div class="heading">
+            <h1 class="center letter-space">Berlin:</h1>
+            <h1 class="center letter-space">Black &#43; White</h1>
+            <h2 class="center letter-space">Enter a Keyword</h2>
+          </div>
+          <form>
+            <label for="search"></label>
+            <input type="search" name="search" id="search"><br>
+            <input type="submit" value="Search" id="submit">
+          </form>
+          <h2 class="center letter-space">Popular #Tags</h2>
+          <ul class="filter-select center">
+            <li><button class="letter-space">Fernsehturm</button></li>
+            <li><button class="letter-space">Spree</button></li>
+            <li><button class="letter-space">Teufelsberg</button></li>
+          </ul>
+        </div>
+
+        <div id="photos">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="center letter-space">
+    <p><a href="https://github.com/JacobWylie"><img src="img/github-logo.png" alt="github logo"></a></p>
+    <p>&copy;2017 Jacob Wylie</p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="js/lightbox/js/lightbox.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
