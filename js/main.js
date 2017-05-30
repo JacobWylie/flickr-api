@@ -4,6 +4,8 @@ $('button').click(function() {
 	$(this).addClass("selected");
 	var flickrAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
 	var tag = $(this).text();
+	var $searchField = $('#search');
+	$searchField.attr('placeholder', tag);
 	tag += ",berlin,blackandwhite";
 	var flickrOptions = {
 		tags: tag,
@@ -28,7 +30,6 @@ $('form').submit(function(evt) {
 	evt.preventDefault();
 	var $searchField = $('#search');
 	var $submitButton = $('#submit');
-
 	$searchField.prop("disabled", true);
 	$submitButton.attr("disabled", true).val("searching...");
 	var flickrAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
@@ -43,7 +44,7 @@ $('form').submit(function(evt) {
 		$.each( data.items, function(i, photo) {
 			var image = (photo.media.m).replace('_m.jpg', '_b.jpg');
 			photoHTML += '<li class="grid-25 tablet-grid-50">';
-			photoHTML += `<a href="${image}.jpg" data-lightbox="image" class="image">`;
+			photoHTML += `<a href="${image}" data-lightbox="image" class="image">`;
 			photoHTML += `<img src="${photo.media.m}"></a></li>`;
 		});
 		photoHTML += '</ul>';
@@ -52,8 +53,8 @@ $('form').submit(function(evt) {
 		$submitButton.attr("disabled", false).val("Search");
 	}
 	$.getJSON(flickrAPI, flickrOptions, displayPhotos);
-}); // End Form Search Event
 
+}); // End Form Search Event
 // Lightbox
 
 lightbox.option({
