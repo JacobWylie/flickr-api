@@ -21,7 +21,7 @@ function displayPhotos(data) {
 // Button click event for #tag selections
 $('button').click(function() {
 	tag = $(this).text();
-	$searchField.attr('placeholder', tag);
+	$searchField.val('').attr('placeholder', tag);
 	tag += ",berlin,blackandwhite";
 	flickrOptions = {
 		tags: tag,
@@ -36,13 +36,13 @@ $('form').submit(function(evt) {
 	$searchField.prop("disabled", true);
 	$submitButton.attr("disabled", true).val("searching...");
 	tag = $searchField.val();
+	$searchField.val('').attr('placeholder', tag);
 	tag += ",berlin,black and white";
 	flickrOptions = {
 		tags: tag,
 		format: "json"
 	}
 	$.getJSON(flickrAPI, flickrOptions, displayPhotos);
-
 }); // End Form Search Event
 
 // Lightbox
