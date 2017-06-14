@@ -1,6 +1,8 @@
 let flickrAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
 let tag;
-let flickrOptions = {};
+let flickrOptions = {
+	format: 'json'
+};
 const $searchField = $('#search');
 const $submitButton = $('#submit');
 
@@ -22,11 +24,8 @@ function displayPhotos(data) {
 $('button').click(function() {
 	tag = $(this).text();
 	$searchField.val('').attr('placeholder', tag);
-	tag += ",berlin,blackandwhite";
-	flickrOptions = {
-		tags: tag,
-		format: "json"
-	}
+	tag += ",berlin,black and white";
+	flickrOptions.tags = tag;
 	$.getJSON(flickrAPI, flickrOptions, displayPhotos);
 }); // End Button Click Event
 
@@ -38,10 +37,7 @@ $('form').submit(function(evt) {
 	tag = $searchField.val();
 	$searchField.val('').attr('placeholder', tag);
 	tag += ",berlin,black and white";
-	flickrOptions = {
-		tags: tag,
-		format: "json"
-	}
+	flickrOptions.tags = tag;
 	$.getJSON(flickrAPI, flickrOptions, displayPhotos);
 }); // End Form Search Event
 
