@@ -2057,7 +2057,8 @@ button {
   font-weight: bold;
   font-family: "Varela Round", "Helvetica Neue", Helvetica, Arial, sans-serif;
   cursor: pointer;
-  border-radius: 5px
+  border-radius: 5px;
+  outline: none;
 }
 
 .button:hover {
@@ -2087,5 +2088,6 @@ footer p {
 
 input[type=search] {
   font-size: 2em;
+  outline: none;
 }
 
